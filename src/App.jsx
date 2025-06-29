@@ -1,11 +1,19 @@
+import React from "react";
+
 export const App = () => {
 	const currentDate = new Date().getFullYear();
-	//декларативный стиль
+	//императивный стиль
 
-	return (
-		<div>
-			<a href="https://ru.react.dev/learn">Learn react</a>
-			<h1>{currentDate}</h1>
-		</div>
+	return React.createElement(
+		"div",
+		null,
+		React.createElement(
+			"a",
+			{
+				href: "https://ru.react.dev/learn",
+			},
+			"Learn react",
+		),
+		React.createElement("h1", null, currentDate),
 	);
 };
